@@ -1,0 +1,41 @@
+h3 {
+    color: rgb(0, 204, 255);
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)
+    /* linear-gradient takes(how to, starting, ending color) */
+}
+
+h1 {
+    text-shadow: 2px 2px black;
+    box-shadow: 3px 3px darkblue;
+    /* textshadow takes horizonal, vertial, the underlingColor */
+}
+
+p {
+    color: yellow;
+    font-size: 24px;
+}
+
+.square {
+    /*Access by class*/
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    margin: auto;
+}
+
+#circle {
+    /*Access by id*/
+    color: darkred;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+    background-color: darkgoldenrod;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #6b0000;
+}
+
+.gradientColor {
+    background: linear-gradient(to right, #ff0000, #000000);
+}
