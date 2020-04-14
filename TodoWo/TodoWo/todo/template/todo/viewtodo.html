@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'todo/base.html' %}
+{% block content %}
+{{ todo.title }}
+    <form method="post">{% csrf_token %}
+{{ form.as_p }}
+    <button type="submit">Update</button>
+    </form>
+     <form method="post" action="{% url 'loggedIn' todo.id %}">{% csrf_token %}
+    <button type="submit">Completed</button>
+    </form>
+    <br>
+    <br>
+        <form method="post" action="{% url 'loggedIn' %}">{% csrf_token %}
+    <button type="submit">Delete</button>
+    </form>
+{% endblock %}
+</body>
+</html>

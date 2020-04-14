@@ -1,0 +1,21 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+    <br>
+<h1>Welcome to current Todo</h1>
+
+    <ul>
+    {% for todo in todos %}
+        {% if todo.important %}
+        <li>
+            <a href="{% url 'viewtodo' todo.id %}"><b>{{ todo.title }}</b></a></li>
+            {% else %}
+            <li><a href="{% url 'viewtodo' todo.id %}">{{ todo.title }}</a></li>
+        {% endif %}
+        {% if todo.memo %}
+            {{ todo.memo }}
+        {% endif %}
+    {% endfor %}
+    </ul>
+
+{% endblock %}
